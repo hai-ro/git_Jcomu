@@ -65,3 +65,10 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'kaminari'
 gem 'devise'
 gem 'mechanize'
+
+#bulk insert'
+gem 'activerecord-import'
+
+gem 'jquery-rails'
+
+gem 'roo'

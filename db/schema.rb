@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_05_100359) do
+ActiveRecord::Schema.define(version: 2020_03_11_115150) do
 
   create_table "clubs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
-    t.date "founding"
-    t.date "join"
+    t.string "abbreviation"
+    t.string "founding"
+    t.string "join"
     t.text "detail"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -31,25 +32,31 @@ ActiveRecord::Schema.define(version: 2020_03_05_100359) do
 
   create_table "players", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
+    t.string "name_yomi"
     t.integer "club_id"
     t.string "figure"
-    t.string "posision_number"
+    t.string "position"
+    t.string "birthday"
+    t.text "player_link"
+    t.boolean "active_check"
+    t.text "name_birthday"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "updated_season"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "club_id"
+    t.string "user_name"
     t.string "email", default: "", null: false
+    t.integer "birthday"
+    t.string "memorial_game"
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "user_name"
-    t.integer "club_id"
-    t.integer "birthday"
-    t.string "memorial_game"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

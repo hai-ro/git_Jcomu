@@ -1,0 +1,35 @@
+現在のインポート状況
+
+<h1>クラブ一覧</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>クラブ名</th>
+      <th>略称</th>
+      <th>設立</th>
+      <th>Ｊリーグ加盟</th>
+      <th>沿革</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @clubs.each do |club| %>
+      <tr>
+        <td><%= club.id %></td>
+        <td><%= club.name %></td>
+        <td><%= club.abbreviation %></td>
+        <td><%= club.founding %></td>
+        <td><%= club.join %></td>
+        <td><%= club.detail %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<%= form_tag import_clubs_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "インポート" %>
+<% end %>
