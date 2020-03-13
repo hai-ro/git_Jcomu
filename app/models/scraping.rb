@@ -64,7 +64,7 @@ class Scraping
     
     id = 1
     
-    while Player.last.id < id
+    while Player.last.id > id
       player = Player.find(id)
       
       if player.updated_season == update
