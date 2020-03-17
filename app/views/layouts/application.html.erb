@@ -1,15 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Jcomu</title>
+    <title>みんプロ | みんなでつくる Jプロフ</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
   </head>
 
   <body>
-    <%= yield %>
+    
+  <header class="header">
+    <h4 class="title_name"><a href="/">みんプロ／みんなでつくる Jプロフ</a></h4>
+  </header>
+  
+  <div class="contents">
+    <div class="main-contents">
+      <%= yield %>
+    </div>
+    
+  <!--  <div class="menu-contents">-->
+  <!--    <p>メニューを入れ込むよ</p>-->
+  <!--  </div>-->
+  </div>
+  
+  <footer class="footer">
+    <p>Application Title</p>
+  </footer>
   </body>
 </html>

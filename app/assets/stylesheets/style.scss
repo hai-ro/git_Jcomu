@@ -1,0 +1,80 @@
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  // background-color: #000000;
+}
+
+header {
+  display: flex;
+  height: 30px;
+  background-color: #000;
+  color: white;
+}
+
+.header a {
+  color: inherit;
+}
+
+
+header .title_name {
+  margin: 2px;
+  display: flex;
+
+}
+
+.contents {
+  margin-left: 13%;
+  margin-right: 13%;
+  // display: flex;
+  min-height: 100vh;
+}
+
+.main-contents {
+}
+
+// .menu-contents {
+//   border: double 5px white;
+//   background-color: #000000;
+//   color: white;
+//   width: 25vh;
+  
+// }
+
+footer {
+  margin-top: auto;
+  background-color: #000000;
+  color: white;
+  text-align: center;
+  padding: 5px;
+}
+
+
+
+a {
+  text-decoration: none;
+}
+
+
+ul {
+  list-style: none;
+}
+
+.btn-square-so-pop {
+  position: relative;
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: #FFF;
+  background: #fd9535;/*色*/
+  border-radius: 4px;/*角の丸み*/
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.05);
+  font-weight: bold;
+  border: solid 2px #d27d00;/*線色*/
+}
+
+.btn-square-so-pop:active {
+  /*押したとき*/
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+}
