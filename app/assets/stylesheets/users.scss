@@ -1,0 +1,47 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.users_show_contents {
+  
+}
+
+.user_data {
+  
+}
+
+.user_name h1 {
+  margin: 1em 0.1em;
+  font-size: 40px;
+}
+
+.user_name span {
+  font-size: 0.5em;
+}
+
+.user_manual {
+  width: 70%;
+  position: relative;
+  left: 40px;
+  z-index: 0;
+  margin: 50px 10px 20px 31px;
+}
+
+.user_manual h4 {
+  border-bottom: solid 2px #000;
+}
+
+.user_manual .fusen_content {
+  width: 400px;
+  height: 1.2em;
+}
+
+.user_manual .fusen_content p {
+  position: relative;
+  top: -15px;
+  left: 48px;
+}
+
+.user_detail .fusen_content {
+  height: 3.5em;
+}

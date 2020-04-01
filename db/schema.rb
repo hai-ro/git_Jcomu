@@ -38,11 +38,11 @@ ActiveRecord::Schema.define(version: 2020_03_11_115150) do
     t.string "position"
     t.string "birthday"
     t.text "player_link"
+    t.string "updated_season"
     t.boolean "active_check"
     t.text "name_birthday"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "updated_season"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

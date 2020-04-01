@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   resources :clubs do
     collection { post :import }
   end
+  resources :users, only: [:show]
+  resources :manuals, only: [:new, :create]
 end

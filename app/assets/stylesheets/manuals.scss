@@ -1,0 +1,44 @@
+// Place all the styles related to the manuals controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.manuals_new_contents {
+  
+}
+
+.manual_form {
+
+}
+
+.manual_form input, textarea {
+  display: block;
+  margin: 1em;
+}
+
+
+.manual_form .fusen {
+  width: 90%;
+}
+
+.manual_form .fusen .fusen_content input, textarea {
+  position: relative;
+  left: 80px;
+  background: #ffffcc;
+  border-radius: 3em 0.5em 2em 0.5em/0.4em 2em 0.5em 3em;
+}
+
+.manual_form .fusen .fusen_content input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  font-family: "ふい字";
+}
+
+.manual_form .fusen .fusen_content input:-moz-placeholder, textarea:-moz-placeholder {
+  font-family: "ふい字";
+}
+
+.manual_form .fusen .fusen_content input::-moz-placeholder, textarea::-moz-placeholder {
+  font-family: "ふい字";
+}
+
+.manual_form .fusen .fusen_content input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  font-family: "ふい字";
+}
