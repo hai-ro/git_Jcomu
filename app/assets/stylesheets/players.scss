@@ -10,6 +10,12 @@
   
 }
 
+.post_button {
+  position: relative;
+  top: 40px;
+  margin: 3px 35%;
+}
+
 .player_data h1 {
   position: relative;
   margin: 12px 10px 12px 5px;
@@ -62,13 +68,38 @@
   background: unset;
 }
 
-.player_manual .manual_btn {
+.player_manual .good {
+  display: flex;
   position: relative;
-  left: 80px;
+  left: 60px;
   top: 15px;
+}
+
+.player_manual .good .good_btn {
+  margin-right: 10px;
+}
+
+.player_manual .good .good_btn_before:hover {
+  color: #FF99FF;
+}
+
+.player_manual .good .good_btn_after {
+  color: red;
+}
+
+.player_manual .good .good_btn_after:hover {
+  color: #FF99FF;
 }
 
 .player_manual .posted_user {
   position: relative;
   left: 115px;
+}
+
+.player_manual .btn {
+  position: relative;
+  top: 15px;
+  left: 150px;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
 }

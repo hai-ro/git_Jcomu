@@ -72,3 +72,9 @@ gem 'activerecord-import'
 gem 'jquery-rails'
 
 gem 'roo'
+
+gem 'pry-rails'
+
+group :production do
+  gem 'rails_12factor'
+end

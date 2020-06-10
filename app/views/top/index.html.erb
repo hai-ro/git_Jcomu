@@ -1,79 +1,16 @@
-<div class="top-contents">
-  <div class="favorite_club">
-    <span class="favorite_club_title">YOUR CLUB</span>
-    <h1>ジェフユナイテッド千葉</h1>  
-    <!--<p class="detail">みんなのクラブプロフィール</p> -->
-    <!--simple format(model.column)で改行を認識させる-->
+<div class="title_book">
+  <div class="page_title_card">
+    <h1>みんなでつくる</h1>
+    <h1>Jのトリセツ</h1>
   </div>
   
-  <div class="news">
-    <span class="news_title">NEWS</span>
-      <ul>
-        <li>船山　貴之のトリセツ</li>
-        <li>ゲリアのトリセツ</li>
-        <li>米倉　恒貴のトリセツ</li>
-      </ul>
+  <div class="main_menu">
+    <ul>
+      <div class="user_session">
+        <li><%= link_to 'ログイン', new_user_session_path, class:'btn-handwrite login_btn' %></li>
+        <li><%= link_to '新規登録', new_user_registration_path, class:'btn-handwrite signup_btn' %></li>
+      </div>
+      <li><%= link_to 'ログインせずにトリセツを読む', clubs_path, class:'btn-handwrite read_btn' %></li>
+    </ul>
   </div>
-  
-  <div class="players">
-    <span class="players_title">PLAYERS</span>
-    
-      <div class="position GK">
-        <span class="position_title GK">GK</span>
-        <ul>
-            <li><a href="#" class="btn-handwrite">新井　章太</a></li>
-            <li><a href="#" class="btn-handwrite">佐藤　優也</a></li>
-            <li><a href="#" class="btn-handwrite">相澤　ピーターコアミ</a></li>
-            <li><a href="#" class="btn-handwrite">鈴木　椋大</a></li>
-        </ul>
-      </div>
-      
-      <div class="position DF">
-        <span class="position_title DF">DF</span>
-        <ul>
-          <li><a href="#" class="btn-handwrite">ゲリア</a></li>
-          <li><a href="#" class="btn-handwrite">岡野　洵</a></li>
-          <li><a href="#" class="btn-handwrite">増嶋　竜也</a></li>
-          <li><a href="#" class="btn-handwrite">チャン　ミンギュ</a></li>
-          <li><a href="#" class="btn-handwrite">鳥海　晃司</a></li>
-          <li><a href="#" class="btn-handwrite">新井　一耀</a></li>
-          <li><a href="#" class="btn-handwrite">安田　理大</a></li>
-          <li><a href="#" class="btn-handwrite">本村　武揚</a></li>
-          <li><a href="#" class="btn-handwrite">下平　匠</a></li>
-          <li><a href="#" class="btn-handwrite">米倉　恒貴</a></li>
-        </ul>
-      </div>
-      
-      <div class="position MF">
-        <span class="position_title MF">MF</span>
-        <ul>
-          <li><a href="#" class="btn-handwrite">田口　泰士</a></li>
-          <li><a href="#" class="btn-handwrite">田坂　祐介</a></li>
-          <li><a href="#" class="btn-handwrite">堀米　勇輝</a></li>
-          <li><a href="#" class="btn-handwrite">為田　大貴</a></li>
-          <li><a href="#" class="btn-handwrite">小島　秀仁</a></li>
-          <li><a href="#" class="btn-handwrite">熊谷　アンドリュー</a></li>
-          <li><a href="#" class="btn-handwrite">矢田　旭</a></li>
-          <li><a href="#" class="btn-handwrite">工藤　浩平</a></li>
-          <li><a href="#" class="btn-handwrite">髙橋　壱晟</a></li>
-          <li><a href="#" class="btn-handwrite">本田　功輝</a></li>
-          <li><a href="#" class="btn-handwrite">見木　友哉</a></li>
-        </ul>
-      </div>
-      
-      <div class="position FW">
-        <span class="position_title FW">FW</span>
-        <ul>
-          <li><a href="#" class="btn-handwrite">クレーベ</a></li>
-          <li><a href="#" class="btn-handwrite">船山　貴之</a></li>
-          <li><a href="#" class="btn-handwrite">佐藤　寿人</a></li>
-          <li><a href="#" class="btn-handwrite">アラン　ピニェイロ</a></li>
-          <li><a href="#" class="btn-handwrite">山下　敬大</a></li>
-          <li><a href="#" class="btn-handwrite">櫻川　ソロモン</a></li>
-          <li><a href="#" class="btn-handwrite">川又　堅碁</a></li>
-        </ul>
-      </div>
-      
-    </div>
-    
 </div>

@@ -2,29 +2,40 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.manuals_new_contents {
+.manuals_contents {
   
+}
+
+.manuals_contents h2 span {
+  color: red;
+  font-size: 2em;
 }
 
 .manual_form {
 
 }
 
-.manual_form input, textarea {
+.manual_form .fusen_content {
+  height: 200px;
   display: block;
   margin: 1em;
 }
 
 
-.manual_form .fusen {
+.manual_form .manual_text {
   width: 90%;
 }
 
-.manual_form .fusen .fusen_content input, textarea {
+.manual_form .fusen .fusen_content textarea {
   position: relative;
-  left: 80px;
+  left: 90px;
   background: #ffffcc;
   border-radius: 3em 0.5em 2em 0.5em/0.4em 2em 0.5em 3em;
+}
+
+.manual_form .fusen .fusen_content textarea {
+  width: 70%;
+  height: 70%;
 }
 
 .manual_form .fusen .fusen_content input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
@@ -41,4 +52,16 @@
 
 .manual_form .fusen .fusen_content input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   font-family: "ふい字";
+}
+
+.manual_form .fusen .fusen_content .posted_user {
+  position: relative;
+  margin: 0.3em;
+  left: 450px;
+}
+
+.manual_form .fusen .fusen_content input {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 }

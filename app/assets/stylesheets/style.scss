@@ -247,3 +247,92 @@ ul {
   position: relative;
   top: -30px;
 }
+
+.actions input{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.return-btn a{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title_book {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  min-width: 400px;
+  min-height: 150vh;
+  max-height: 200vh;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background: #CD853F;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.title_book:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  background: radial-gradient(#575450 6px, transparent 7px) repeat-y;
+  background-size: 30px 30px;
+  border-right: 30px solid #d44147;
+  box-sizing: border-box;
+}
+
+.title_book .page_title_card {
+  width: 60%;
+  height: 180px;
+  padding: 10px;
+  background-size: cover;
+  
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-sizing: border-box;
+  position: relative;
+  margin: auto;
+  top: 150px;
+  
+  font: 400px 2em;
+  color: #000000;
+  text-align: center;
+}
+
+.title_book .main_menu {
+  position: relative;
+  top: 200px;
+  left: 150px;
+  font-size: 2em;
+  
+}
+
+.title_book .main_menu .user_session {
+  display: flex;
+}
+
+.title_book .main_menu ul li {
+  margin: 10px;
+}
+
+.title_book .main_menu .signup_btn {
+  margin-left: 30px;
+}
+
+.title_book .main_menu .read_btn {
+  position: relative;
+  right: 40px;
+  margin-top: 40px;
+}
+
+.title_book .main_menu .btn-handwrite {
+  background-color: #00BFFF;
+}

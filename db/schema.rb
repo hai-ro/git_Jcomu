@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_11_115150) do
+ActiveRecord::Schema.define(version: 2020_05_10_060518) do
 
   create_table "clubs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -22,8 +22,17 @@ ActiveRecord::Schema.define(version: 2020_03_11_115150) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "likes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "manual_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["manual_id"], name: "index_likes_on_manual_id"
+    t.index ["user_id"], name: "index_likes_on_user_id"
+  end
+
   create_table "manuals", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.text "manual_text"
+    t.text "text"
     t.integer "player_id"
     t.integer "user_id"
     t.datetime "created_at", null: false
@@ -46,10 +55,11 @@ ActiveRecord::Schema.define(version: 2020_03_11_115150) do
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "club_id"
-    t.string "user_name"
+    t.bigint "club_id"
+    t.string "name"
     t.string "email", default: "", null: false
-    t.integer "birthday"
+    t.text "detail"
+    t.date "birthday"
     t.string "memorial_game"
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -61,4 +71,6 @@ ActiveRecord::Schema.define(version: 2020_03_11_115150) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "likes", "manuals"
+  add_foreign_key "likes", "users"
 end

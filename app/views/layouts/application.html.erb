@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>じぇいとり | みんなでつくる Jのトリセツ</title>
+    <title>みんなでつくる Jのトリセツ</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,30 +11,26 @@
   </head>
 
   <body>
+    <header class="header">
+      <h4 class="title_name"><a href="/">みんなでつくる Jのトリセツ</a></h4>
+      <nav class="menu">
+        <ul>
+          <li><%= link_to "クラブ一覧", clubs_path %></li>
+          <% if user_signed_in? %>
+            <li><%= link_to "マイページ", user_path(current_user) %></li>
+            <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+          <% else %>
+            <li><%= link_to "ログイン", user_session_path %></li>
+            <li><%= link_to "新規登録", new_user_registration_path %></li>
+          <% end %>
+        </ul>
+      </nav>
+    </header>
     
-  <header class="header">
-    <h4 class="title_name"><a href="/">じぇいとり／みんなでつくる Jのトリセツ</a></h4>
-    <nav class="menu">
-      <ul>
-        <li><a href="/">クラブ一覧</a></li>
-        <li><a href="users/show">マイページ</a></li>
-        <li><a href="/">ログアウト</a></li>
-      </ul>
-    </nav>
-  </header>
-  
-  <div class="contents">
-    <div class="main-contents">
-      <%= yield %>
-    </div>
+    <%= yield %>
     
-  <!--  <div class="menu-contents">-->
-  <!--    <p>メニューを入れ込むよ</p>-->
-  <!--  </div>-->
-  </div>
-  
-  <footer class="footer">
-    <p>みんプロ／みんなでつくる Jプロフ</p>
-  </footer>
+    <footer class="footer">
+      <p>みんなでつくる Jのトリセツ</p>
+    </footer>
   </body>
 </html>

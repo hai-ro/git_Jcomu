@@ -2,19 +2,18 @@
   <div class="main-contents">
     <div class="manuals_contents">
       
-      <h2><span><%= @player.name %></span>のトリセツを投稿</h2>
+      <h2><span><%= @player.name %></span>のトリセツを編集</h2>
       <div class="manual_form">
         
         <%= form_for [@player, @manual] do |f| %>
           <div class="manual_text fusen">
             <div class="fusen_content">
-              <%= f.text_area :text, placeholder: 'この選手のトリセツを書きましょう！' %>
+              <%= f.text_area :text, placeholder: 'この選手のトリセツを編集！' %>
               <div class="posted_user">
                 <span>投稿者:</span><%= current_user.name %>
               </div>
-              <%= f.hidden_field :player_id %>
               <div class="submit">
-                <%= f.submit "投稿！", class: 'btn-handwrite' %>
+                <%= f.submit "更新！", class: 'btn-handwrite' %>
               </div>
             </div>
           </div>

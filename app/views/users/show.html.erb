@@ -1,51 +1,84 @@
-<div class="users_show_contents">
-  
-  <div class="user_show title_card">
-    <div class="user_name">
-      <h1>namenamenamename<span>のページ</span></h1>
+<div class="contents">
+  <div class="main-contents">
+    <div class="users_show_contents">
+      
+    <% if user_signed_in? %>
+      <div class="user_show title_card">
+        <div class="user_name">
+          <h1><%= @user.name %><span>のページ</span></h1>
+        </div>
+      </div>
+      
+      <% if current_user.id == @user.id %>
+        <div class="news">
+          <span class="news_title">最近の投稿</span>
+            <ul>
+            <% @manuals.each do |manual| %>
+              <li><%= link_to manual.player.name + "のトリセツ", player_path(manual.player.id) %>　(<%= manual.updated_at.strftime("%Y-%m-%d %H:%M") %>)</li>
+            <% end %>
+            </ul>
+        </div>
+      <% end %>
+      
+      <div class="edit_button">
+        <% if user_signed_in? %>
+          <% if current_user.id == @user.id %>
+            <%= link_to "ユーザー情報を変更", edit_user_registration_path(@user.id), class:"btn-handwrite" %>
+          <% end %>
+        <% end %>
+      </div>
+      
+      <div class="user_manual">
+        
+        <div class="user_club">
+          <h4>私のお気に入りクラブ</h4>
+          <% if @user.club %>
+            <p><%= link_to @user.club.name, club_path(@user.club.id), class:"club_btn" %>
+          <% else %>
+            <p>未設定</p>
+          <% end %>
+        </div>
+        
+        <div class="user_detail">
+          <h4>このページを見てくれている方へ</h4>
+          <% if @user.detail %>
+            <div class="fusen">
+              <div class="fusen_content">
+                <p><%= @user.detail %></p>
+              </div>
+            </div>
+          <% else %>
+          <% end %>
+        </div>
+        
+        <div class="user_birthday">
+          <h4>誕生日</h4>
+          <% if @user.birthday %>
+            <div class="fusen">
+              <div class="fusen_content">
+                <p><%= @user.birthday %></p>
+              </div>
+            </div>
+          <% end %>
+        </div>
+        
+        <div class="user_memorial_game">
+          <h4>思い出の試合</h4>
+          <% if @user.memorial_game %>
+            <div class="fusen">
+              <div class="fusen_content">
+                <p><%= @user.memorial_game %></p>
+              </div>
+            </div>
+          <% end %>
+        </div>
+        
+      </div>
+      
+    <% else %>
+      <% redirect_to root_path %>
+    
+    <% end %>  
     </div>
   </div>
-  
-  
-  <div class="user_manual">
-    
-    <div class="user_club">
-      <h4>私のお気に入りクラブ</h4>
-      <div class="fusen">
-        <div class="fusen_content">
-          <p>ジェフユナイテッド千葉</p>
-        </div>
-      </div>
-    </div>
-    
-    <div class="user_detail">
-      <h4>ごあいさつ</h4>
-      <div class="fusen">
-        <div class="fusen_content">
-          <p>よろしくお願いします！！！！！！！！！！！！！！！</p>
-        </div>
-      </div>
-    </div>
-    
-    <div class="user_birthday">
-      <h4>誕生日</h4>
-      <div class="fusen">
-        <div class="fusen_content">
-          <p>1990/05/10</p>
-        </div>
-      </div>
-    </div>
-    
-    <div class="user_memorial_game">
-      <h4>思い出の試合</h4>
-      <div class="fusen">
-        <div class="fusen_content">
-          <p>2012/11/23　J1昇格プレーオフ　大分vs千葉</p>
-        </div>
-      </div>
-    </div>
-    
-  </div>
-  
 </div>
-  

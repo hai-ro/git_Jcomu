@@ -1,35 +1,27 @@
-現在のインポート状況
-
-<h1>クラブ一覧</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>クラブ名</th>
-      <th>略称</th>
-      <th>設立</th>
-      <th>Ｊリーグ加盟</th>
-      <th>沿革</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @clubs.each do |club| %>
-      <tr>
-        <td><%= club.id %></td>
-        <td><%= club.name %></td>
-        <td><%= club.abbreviation %></td>
-        <td><%= club.founding %></td>
-        <td><%= club.join %></td>
-        <td><%= club.detail %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-
-<%= form_tag import_clubs_path, multipart: true do %>
-  <%= file_field_tag :file %>
-  <%= submit_tag "インポート" %>
-<% end %>
+<div class="contents">
+  <div class="main-contents">
+    <div class="club-contents">
+      <h1>クラブ一覧</h1>
+      
+      <div class="clubs_info">
+        <ul class="odd">
+          <% @clubs_odd.each do |club_odd| %>
+            <li><%= link_to club_odd.name, club_path(club_odd.id) %></li>
+          <% end %>
+        </ul>
+      
+        <ul class="even">
+          <% @clubs_even.each do |club_even| %>
+            <li><%= link_to club_even.name, club_path(club_even.id) %></li>
+          <% end %>
+        </ul>
+      </div>
+    
+    </div>
+    
+    <!--<%= form_tag import_clubs_path, multipart: true do %>-->
+    <!--  <%= file_field_tag :file %>-->
+    <!--  <%= submit_tag "インポート" %>-->
+    <!--<% end %>-->
+  </div>
+</div>

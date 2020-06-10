@@ -1,0 +1,58 @@
+<div class="contents">
+  <div class="main-contents">
+    <div class="club-contents">
+      <div class="favorite_club">
+        <% if user_signed_in? %>
+          <% if @club.id == current_user.club.id %>
+          <span class="favorite_club_title">YOUR CLUB!</span>
+          <% end %>
+        <% end %>
+        <h1><%= @club.name %></h1>
+        <!--<p class="detail">みんなのクラブプロフィール</p> -->
+        <!--simple format(model.column)で改行を認識させる-->
+      </div>
+      
+      <div class="players">
+        <span class="players_title">PLAYERS</span>
+        
+          <div class="position GK">
+            <span class="position_title GK">GK</span>
+            <ul>
+              <% @gks.each do |gk| %>
+                <li><%= link_to gk.name , player_path(gk.id), class:"btn-handwrite" %></li>
+              <% end %>
+            </ul>
+          </div>
+          
+          <div class="position DF">
+            <span class="position_title DF">DF</span>
+            <ul>
+              <% @dfs.each do |df| %>
+                <li><%= link_to df.name , player_path(df.id), class:"btn-handwrite" %></li>
+              <% end %>
+            </ul>
+          </div>
+          
+          <div class="position MF">
+            <span class="position_title MF">MF</span>
+            <ul>
+              <% @mfs.each do |mf| %>
+                <li><%= link_to mf.name , player_path(mf.id), class:"btn-handwrite" %></li>
+              <% end %>
+            </ul>
+          </div>
+          
+          <div class="position FW">
+            <span class="position_title FW">FW</span>
+            <ul>
+              <% @fws.each do |fw| %>
+                <li><%= link_to fw.name , player_path(fw.id), class:"btn-handwrite" %></li>
+              <% end %>
+            </ul>
+          </div>
+          
+        </div>
+        
+    </div>
+  </div>
+</div>
