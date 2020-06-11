@@ -74,6 +74,14 @@
         </div>
         
       </div>
+    
+    <% elsif current_user.admin? %>
+      <div class="admin_contents">
+        <%= form_tag import_clubs_path, multipart: true do %>
+          <%= file_field_tag :file %>
+          <%= submit_tag "インポート" %>
+        <% end %>
+      </div>
       
     <% else %>
       <% redirect_to root_path %>
