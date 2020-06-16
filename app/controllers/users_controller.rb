@@ -10,4 +10,10 @@ class UsersController < ApplicationController
   def move_to_sign_in
     redirect_to "/users/sign_in" unless user_signed_in?
   end
+  
+  def import
+    # fileはtmpに自動で一時保存される
+    Club.import(params[:file])
+    redirect_to user_path(1)
+  end
 end
