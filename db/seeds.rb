@@ -1758,4 +1758,3 @@ Player.create!([
   {name: "三宅　海斗", name_yomi: "Kaito MIYAKE", club_id: 56, figure: "174/72", position: "MF", birthday: "1997/08/27", player_link: nil, updated_season: "2020a", active_check: true, name_birthday: "三宅　海斗1997/08/27"},
   {name: "馬場　賢治", name_yomi: "Kenji BABA", club_id: 56, figure: "177/77", position: "FW", birthday: "1985/07/07", player_link: nil, updated_season: "2020a", active_check: true, name_birthday: "馬場　賢治1985/07/07"}
 ])
-
