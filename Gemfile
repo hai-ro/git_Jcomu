@@ -75,6 +75,8 @@ gem 'roo'
 
 gem 'pry-rails'
 
+gem 'seed_dump'
+
 group :production do
   gem 'rails_12factor'
 end
