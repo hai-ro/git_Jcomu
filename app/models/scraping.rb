@@ -6,10 +6,10 @@ class Scraping
     
     
     # 取得先クラブ検索時のURLを貼り付け
-    url = 'https://data.j-league.or.jp/SFIX02/search?displayId=SFIX02&selectValue=3&displayId=SFIX02&selectValueTeam=338&displayName=%EF%BC%AA%EF%BC%93%E3%83%AA%E3%83%BC%E3%82%B0&displayNameTeam=%E9%B9%BF%E5%85%90%E5%B3%B6%E3%83%A6%E3%83%8A%E3%82%A4%E3%83%86%E3%83%83%E3%83%89%EF%BC%A6%EF%BC%A3'
+    url = 'https://data.j-league.or.jp/SFIX02/search?displayId=SFIX02&selectValue=1&displayId=SFIX02&selectValueTeam=14&displayName=%EF%BC%AA%EF%BC%91%E3%83%AA%E3%83%BC%E3%82%B0&displayNameTeam=%E5%8C%97%E6%B5%B7%E9%81%93%E3%82%B3%E3%83%B3%E3%82%B5%E3%83%89%E3%83%BC%E3%83%AC%E6%9C%AD%E5%B9%8C'
     
     
-    club_id = 56 #Clubsテーブルのidと一致させること
+    club_id = 1 #Clubsテーブルのidと一致させること
     
     
     n=3
