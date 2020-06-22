@@ -1,4 +1,4 @@
-User.create(email: 'taka.aquacoin@gmail.com', password: 'Basara0510', name: 'かんりにん', club_id: '31', admin: true)
+User.create(email: 'taka.aquacoin@gmail.com', password: 'Basara0510', name: 'admin', club_id: '31', admin: true)
 
 Club.create!([
   {name: "北海道コンサドーレ札幌", abbreviation: "札幌", founding: "1935年", join: "1998年", detail: nil},
